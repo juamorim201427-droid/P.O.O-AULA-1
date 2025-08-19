@@ -1,7 +1,32 @@
 package app;
 
 public class PrimeiraClasse{
-    public static void main(String[] args) {
-        System.out.println("Olá Mundo!!!");
+    public static void main(String[] args){
+        Aluno a1 = new Aluno();
+        a1.nome = "Juliana";
+        a1.idade = 38;
+
+        Aluno a2 = a1;
+        a2.nome = "Thomas";
+
+
+        System.out.println("[A1]");
+        System.out.println("nome = " + a1.nome);
+        System.out.println("idade = " + a1.idade);
+
+        System.out.println("[A2]");
+        System.out.println("nome = " + a2.nome);
+        System.out.println("idade = " + a2.idade);
+
+        
+        System.out.println("[CHAMADA DE MÉTODO]");
+        System.out.println("A1 = " + a1.getDados());
+        System.out.println("idade = " + a2.getDados());
+
+        Aluno a3 = new Aluno("Maria", 35);
+        System.out.println("[CHAMADA DE MÉTODO]");
+        System.out.println("A3 = " + a3.getDados());
+
+
     }
 }
